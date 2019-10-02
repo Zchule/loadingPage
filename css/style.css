@@ -1,0 +1,268 @@
+html, body{
+  padding:0px;
+  margin:0px;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(234, 234, 225);
+}
+
+.brand_image{
+  width: 150px;
+}
+
+.brand_image img {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  background-color: white;
+  padding: 5px 20px;
+  color: white;
+  align-items: center;
+  padding-bottom: 0;
+  justify-content: space-between;
+  height: 80px;
+}
+
+nav ul{
+  display: flex;
+}
+
+nav li{
+  padding-left: 50px;
+  list-style: none;
+  font-family: 'Oswald', sans-serif;
+  
+}
+
+nav li a{
+  text-transform: uppercase;
+  color: gray;
+  text-decoration: none;
+}
+
+nav li a:hover{
+  color: black;
+}
+
+.articles {
+  margin: 10px;
+  background-color: white;
+  margin-top: 20px;
+  box-shadow: 5px 4px 11px 1px #8888;
+  cursor: pointer;
+  position: relative;
+}
+
+.articles-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(0px, 407px));
+  justify-content: center;
+  grid-gap: 10px;
+}
+
+figure.articles-img {
+  margin: 0px;
+  width: 100%;
+  vertical-align: top;
+  height: 250px;
+}
+
+img.imgTam {
+  width: 100%;
+  height: 100%;
+}
+
+/* textos */
+.articles-details {
+  padding: 0px 32px;
+}
+h5 {
+  color: #ff565c;
+  text-transform: uppercase;
+}
+h2, h1 {
+  margin: 0px;
+}
+p {
+  color: #a5a5a7
+}
+
+/* over */
+.post-overlay {
+  background: #ff565c;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  padding: 20px;
+}
+
+.articles:hover .post-overlay {
+  display: block;
+  color: white;
+}
+
+.content-over {
+  color: white;
+  margin-bottom: 89px;
+}
+
+h5.subtitle-over {
+  color: white;
+}
+
+div.icon-over {
+  width: 150px;
+  height: 120px;
+}
+
+.icon-over > .icon {
+  font-size: 100px;
+}
+
+h1.title-over {
+  color: white;
+  font-size: 20px;
+}
+
+.p-over {
+  color: white;
+}
+
+.post-likes-over {
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+}
+
+.post-likes-over ul {
+  padding: 0px;
+  color:white;
+}
+
+.post {
+  background-color: black;
+}
+
+.post-likes-over li{
+  list-style: none;
+  display: inline;
+  margin: 0px 20px;
+  color: white;
+}
+
+/* likes */
+
+.post-like ul {
+  padding: 0px;
+}
+
+.post-like li{
+  list-style: none;
+  display: inline;
+  margin: 0px 20px;
+  color: #a5a5a7;
+}
+
+/* footer */
+.hero-container {
+  display: grid;
+  grid-template-columns: 10% 60% 30%;
+  grid-template-areas: "logo category form";
+  grid-gap: 10px;
+  background-color: black;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.category {
+  grid-area: category;
+}
+
+.form {
+  grid-area: form;
+  padding: 20px;
+  position: relative;
+}
+
+.hero-container > .logo {
+  width: 150px;
+}
+
+.logo img {
+  width: 100%;
+  margin-left: 30px;
+}
+
+.category {
+  display: flex;
+  padding: 5px 20px;
+  color: white;
+  align-items: center;
+  padding-bottom: 0;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.category ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category li{
+  padding-left: 50px;
+  list-style: none;
+  font-family: 'Oswald', sans-serif;
+  margin: 5px;
+}
+
+.category li a{
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+}
+
+.category li a:hover{
+  color: white;
+}
+
+.form strong {
+  color: white;
+}
+
+.form-email {
+  position: absolute;
+  margin-top: 10px;
+  background-color: white;
+}
+
+.subscribe {
+  background: #ff565c;
+  color: white;
+  padding: 5px;
+  margin: 0px;
+  border: 0;
+  text-transform: uppercase;
+}
+
+input {
+  outline: 0 none;
+  padding: 5px;
+  border: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 100%;
+    grid-template-areas: "logo"
+                         "form"
+                         "category";
+  }
+}
